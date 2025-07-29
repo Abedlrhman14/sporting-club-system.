@@ -4,7 +4,6 @@ import SportCardList from './componned/SportCardList';
 
 
 interface Sport {
-  id: string;
   name: string;
   description: string;
   image: string;
