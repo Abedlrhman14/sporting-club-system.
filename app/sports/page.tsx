@@ -3,7 +3,12 @@ import React, { useEffect, useState } from 'react'
 import SportCardList from './componned/SportCardList';
 
 
-
+interface Sport {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+}
 const page = () => {
   const [sports, setsports] = useState<Sport[]>([]);
   const [selectedSport , setSelectedSport] = useState('');
