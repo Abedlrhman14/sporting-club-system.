@@ -6,20 +6,24 @@ import Link from "next/link";
 export default function Home() {
   return (
       <>
+        {/* Video Back ground */}
        <div className="relative w-full h-screen overflow-hidden">
-          {/* Background Videos */}
-     <iframe
-        className="absolute top-0 left-0 w-full h-full z-0"
-        src="https://www.youtube.com/embed/PxQZQp_Ijak?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=PxQZQp_Ijak&rel=0"
-        title="Blue Ribbon Video"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      />
+    
+          <div className="relative w-full pb-[56.25%] h-0 overflow-hidden"> {/* نسبة 16:9 */}
+              <iframe
+                className="absolute top-0 left-0 w-full h-full z-0 "
+                src="https://www.youtube.com/embed/PxQZQp_Ijak?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=PxQZQp_Ijak&rel=0"
+                title="Blue Ribbon Video"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+          </div>
 
           {/* overlay */}
-         <div className="absolute top-0 left-0 w-full h-full bg-black/60  z-10"/>    
-            <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col mt-30 items-center justify-center text-white text-center px-4">
+          <div className="absolute top-0 left-0 w-full h-full bg-black/60  z-10"/>    
+
+          <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col mt-30 items-center justify-center text-white text-center px-4">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                   🏆 Blue Ribbon Egypt
                 </h1>
@@ -49,8 +53,8 @@ export default function Home() {
                       </div>
                     </Link>
                  </div>
-            </div>
-        </div>
+          </div>
+       </div>
 
        {/* About Section */}
           <section className="bg-[#0D1117] text-white py-16 px-6 text-center">
