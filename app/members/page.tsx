@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { UserPlus } from 'lucide-react';
+import { UserPlus } from 'lucide-react'; //icon
 import Navbar from '../components/navbar';
 import { useMembers } from '../Context/MemberContext' 
 
@@ -12,8 +12,11 @@ const MembersPage = () => {
 
   const handleAddMember = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !age) return;
 
+    // validation 
+    if (!name || !age) return window.alert('name and age is requierd');
+
+      
     const newMember = {
       id: Date.now(),
       name,

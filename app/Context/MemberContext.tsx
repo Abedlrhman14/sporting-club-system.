@@ -8,7 +8,7 @@ interface Member {
   age: number;
   sports: string[];
 }
-// to define the members 
+// to define the types of members 
 interface MemberContextType {
   members: Member[];
   setMembers: React.Dispatch<React.SetStateAction<Member[]>>;
@@ -22,7 +22,7 @@ const defaultMembers: Member[] = [
   { id: 2, name: 'Sara Ali', age: 19, sports: ['Basketball'] },
 ];
 
-// this to share data for all components 
+
 export const MemberProvider = ({ children }: { children: React.ReactNode }) => {
   const [members, setMembers] = useState<Member[]>([]);
 
@@ -33,7 +33,7 @@ export const MemberProvider = ({ children }: { children: React.ReactNode }) => {
       const merged = [...parsed];
 
       defaultMembers.forEach((defaultMember) => {
-        if (!parsed.some((m) => m.name === defaultMember.name)) {
+        if (!parsed.some((m) => m.id === defaultMember.id)) {
           merged.push(defaultMember);
         }
       });

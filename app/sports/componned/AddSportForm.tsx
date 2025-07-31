@@ -10,7 +10,7 @@ const AddSportForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !image || !description) return;
+    if (!name || !image || !description) return window.alert('something missed');
     addSport(name, image, description);
     setName('');
     setImage('');
@@ -47,7 +47,7 @@ const AddSportForm: React.FC = () => {
                 const reader = new FileReader();
                 reader.onloadend = () => {
                     if (reader.result && typeof reader.result === 'string') {
-                    setImage(reader.result); // ✅ store base64 instead of temp url
+                    setImage(reader.result); 
         }
       };
       reader.readAsDataURL(file);

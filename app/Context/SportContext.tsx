@@ -67,7 +67,7 @@ export const SportProvider = ({ children }: { children: React.ReactNode }) => {
 
   const addSport = (name: string, image: string, description: string) => {
     const exists = sports.some((s) => s.name.toLowerCase() === name.toLowerCase());
-    if (exists) return;
+    if (exists) return window.alert('this sport allready exist');
     const newSport: Sport = { name, image, description };
     setSports((prev) => [...prev, newSport]);
   };

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const SportCardList: React.FC<Props> = ({ selectedSport, setSelectedSport }) => {
-  const { sports } = useSports(); // ✅ بس sports دلوقتي
+  const { sports } = useSports();
 
   return (
     <section className='relative z-30 px-10 py-16 bg-black text-white'>
@@ -35,7 +35,7 @@ const SportCardList: React.FC<Props> = ({ selectedSport, setSelectedSport }) => 
         ))}
       </div>
 
-      {/* ✅ AddSportForm now reads from context internally */}
+      
       <AddSportForm />
     </section>
   );
